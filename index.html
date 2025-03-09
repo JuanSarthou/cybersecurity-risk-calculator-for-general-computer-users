@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Risk Calculator for General Computer Users</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Risk Calculator for General Computer Users</h1>
+      <p>Answer the following questions honestly to evaluate your cybersecurity habits.</p>
+    </header>
+
+    <form id="risk-form">
+      <div class="question">
+        <label>1. Do you use strong, unique passwords for all your accounts?</label>
+        <div>
+          <input type="radio" id="q1-yes" name="q1" value="0">
+          <label for="q1-yes">Yes (0 points)</label>
+        </div>
+        <div>
+          <input type="radio" id="q1-no" name="q1" value="2">
+          <label for="q1-no">No (2 points)</label>
+        </div>
+      </div>
+      <div class="question">
+        <label>2. Do you use multi-factor authentication (MFA) for your accounts?</label>
+        <div>
+          <input type="radio" id="q2-yes" name="q2" value="0">
+          <label for="q2-yes">Yes (0 points)</label>
+        </div>
+        <div>
+          <input type="radio" id="q2-no" name="q2" value="2">
+          <label for="q2-no">No (2 points)</label>
+        </div>
+      </div>
+      <div class="question">
+        <label>3. Do you regularly update your operating system and software?</label>
+        <div>
+          <input type="radio" id="q3-yes" name="q3" value="0">
+          <label for="q3-yes">Yes (0 points)</label>
+        </div>
+        <div>
+          <input type="radio" id="q3-no" name="q3" value="2">
+          <label for="q3-no">No (2 points)</label>
+        </div>
+      </div>
+      <div class="question">
+        <label>4. Do you use an antivirus or endpoint protection software?</label>
+        <div>
+          <input type="radio" id="q4-yes" name="q4" value="0">
+          <label for="q4-yes">Yes (0 points)</label>
+        </div>
+        <div>
+          <input type="radio" id="q4-no" name="q4" value="2">
+          <label for="q4-no">No (2 points)</label>
+        </div>
+      </div>
+      <div class="question">
+        <label>5. Do you connect to public Wi-Fi networks without using a VPN?</label>
+        <div>
+          <input type="radio" id="q5-yes" name="q5" value="2">
+          <label for="q5-yes">Yes (2 points)</label>
+        </div>
+        <div>
+          <input type="radio" id="q5-no" name="q5" value="0">
+          <label for="q5-no">No (0 points)</label>
+        </div>
+      </div>
+      <div class="question">
+        <label>6. Do you click on links or open attachments in unsolicited emails?</label>
+        <div>
+          <input type="radio" id="q6-never" name="q6" value="0">
+          <label for="q6-never">Never (0 points)</label>
+        </div>
+        <div>
+          <input type="radio" id="q6-sometimes" name="q6" value="1">
+          <label for="q6-sometimes">Sometimes (1 point)</label>
+        </div>
+        <div>
+          <input type="radio" id="q6-often" name="q6" value="2">
+          <label for="q6-often">Often (2 points)</label>
+        </div>
+      </div>
+      <div class="question">
+        <label>7. Do you back up your data regularly?</label>
+        <div>
+          <input type="radio" id="q7-yes" name="q7" value="0">
+          <label for="q7-yes">Yes (0 points)</label>
+        </div>
+        <div>
+          <input type="radio" id="q7-no" name="q7" value="2">
+          <label for="q7-no">No (2 points)</label>
+        </div>
+      </div>
+      <div class="question">
+        <label>8. Have you ever shared your passwords with others?</label>
+        <div>
+          <input type="radio" id="q8-yes" name="q8" value="2">
+          <label for="q8-yes">Yes (2 points)</label>
+        </div>
+        <div>
+          <input type="radio" id="q8-no" name="q8" value="0">
+          <label for="q8-no">No (0 points)</label>
+        </div>
+      </div>
+      <div class="question">
+        <label>9. Do you use the same password for multiple accounts?</label>
+        <div>
+          <input type="radio" id="q9-yes" name="q9" value="2">
+          <label for="q9-yes">Yes (2 points)</label>
+        </div>
+        <div>
+          <input type="radio" id="q9-no" name="q9" value="0">
+          <label for="q9-no">No (0 points)</label>
+        </div>
+      </div>
+      <div class="question">
+        <label>10. Do you have privacy settings enabled on your social media accounts?</label>
+        <div>
+          <input type="radio" id="q10-yes" name="q10" value="0">
+          <label for="q10-yes">Yes (0 points)</label>
+        </div>
+        <div>
+          <input type="radio" id="q10-no" name="q10" value="1">
+          <label for="q10-no">No (1 point)</label>
+        </div>
+      </div>
+      <button type="button" id="calculate-btn">Calculate Risk</button>
+    </form>
+
+    <div id="result">
+      <!-- The result will be displayed here -->
+    </div>
+    
+    <section class="cyber-practices">
+      <h2>Enhanced Cybersecurity Practices for Web Development</h2>
+      <ul>
+        <li><strong>Input Validation and Data Handling:</strong> Trim input fields and sanitize all user input.</li>
+        <li><strong>Authentication and Password Management:</strong> Enforce strong password policies, limit password attempts, and store passwords securely.</li>
+        <li><strong>Data Encoding and Client Security:</strong> Use UTF-8 encoding, minimize client-side cookies, and allow copy/paste functionality as needed.</li>
+        <li><strong>Access Control and Monitoring:</strong> Adopt the principle of least privilege, define user roles clearly, and implement comprehensive logging.</li>
+        <li><strong>Architectural Considerations:</strong> Use an MVC framework and integrate CAPTCHA on forms.</li>
+      </ul>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
